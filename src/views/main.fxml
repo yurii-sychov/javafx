@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="Main" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="50.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Додати">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Змінити">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="220.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Видалити">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField layoutX="330.0" prefHeight="30.0" prefWidth="250.0" promptText="Пошук..." AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane prefHeight="240.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView editable="true" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="290.0" text="Підрозділ" />
+                <TableColumn prefWidth="290.0" text="Енергеичний об`єкт" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane disable="true" prefHeight="110.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="150.0" text="Підрозділ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutY="40.0" prefHeight="30.0" prefWidth="150.0" text="Енергетичний об`єкт">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="160.0" prefHeight="30.0" promptText="Оберіть підрозділ" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" />
+            <TextField layoutX="160.0" layoutY="40.0" prefHeight="30.0" promptText="Введіть назву енергетичного об`'єкту" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" text="Відправити" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>
