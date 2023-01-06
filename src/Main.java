@@ -1,3 +1,4 @@
+import interfaces.CollectionAddressBook;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,11 +20,19 @@ public class Main extends Application{
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
-        stage.setTitle("JavaFX Application");
+        stage.setTitle("Адресна книга");
         stage.setWidth(600);
         stage.setHeight(400);
         stage.setMinWidth(600);
         stage.setMinHeight(400);
         stage.show();
+        
+        testData();
+    }
+
+    private void testData() {
+        CollectionAddressBook addressBook = new CollectionAddressBook();
+        addressBook.fillTestData();
+        addressBook.printDisplay();
     }
 }
